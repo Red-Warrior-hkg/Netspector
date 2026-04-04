@@ -1,523 +1,144 @@
-<<<<<<< HEAD
-\# Netspector
 
-
-
-A lightweight network inspection tool built from scratch to explore port scanning, host discovery, and network analysis techniques.
-
-
-
-\---
-
-
-
-\## Overview
-
-
-
-\*\*Netspector\*\* is a simple command-line tool designed to perform basic network reconnaissance tasks.
-
-It focuses on core networking concepts while remaining fast, minimal, and dependency-free.
-
-
-
-This project is built for:
-
-
-
-\* Learning low-level networking
-
-\* Understanding how port scanners work
-
-\* Practicing Python in real-world scenarios
-
-\* Building a strong cybersecurity portfolio
-
-
-
-\---
-
-
-
-\## Features
-
-
-
-\* TCP port scanning (single port or range)
-
-\* Basic UDP port scanning
-
-\* Host reachability check (ping)
-
-\* RTT (latency) measurement
-
-\* Subnet IP enumeration (CIDR support)
-
-\* Private IP detection (RFC 1918)
-
-\* Local listening ports discovery
-
-\* Domain name resolution
-
-\* Interactive CLI (REPL mode)
-
-\* Colored terminal output
-
-\* No external dependencies (Python standard library only)
-
-
-
-\---
-
-
-
-\## Project Structure
-
-
-
-\---
-
-<style>
-
-&#x20; .tree-terminal {
-
-&#x20;   background: #1a1a1a;
-
-&#x20;   border-radius: 10px;
-
-&#x20;   overflow: hidden;
-
-&#x20;   font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
-
-&#x20;   font-size: 13.5px;
-
-&#x20;   margin: 16px 0;
-
-&#x20; }
-
-&#x20; .tree-titlebar {
-
-&#x20;   background: #2a2a2a;
-
-&#x20;   padding: 10px 14px;
-
-&#x20;   display: flex;
-
-&#x20;   align-items: center;
-
-&#x20;   gap: 8px;
-
-&#x20;   border-bottom: 1px solid #333;
-
-&#x20; }
-
-&#x20; .tree-dot {
-
-&#x20;   width: 12px;
-
-&#x20;   height: 12px;
-
-&#x20;   border-radius: 50%;
-
-&#x20; }
-
-&#x20; .tree-dot-red { background: #ff5f57; }
-
-&#x20; .tree-dot-yellow { background: #febc2e; }
-
-&#x20; .tree-dot-green { background: #28c840; }
-
-&#x20; .tree-tab {
-
-&#x20;   margin-left: 12px;
-
-&#x20;   font-size: 12px;
-
-&#x20;   color: #888;
-
-&#x20;   background: #1a1a1a;
-
-&#x20;   padding: 3px 12px;
-
-&#x20;   border-radius: 4px;
-
-&#x20; }
-
-&#x20; .tree-body {
-
-&#x20;   padding: 18px 20px;
-
-&#x20;   color: #e0e0e0;
-
-&#x20;   line-height: 1.6;
-
-&#x20; }
-
-&#x20; .tree-body .dir {
-
-&#x20;   color: #4dabf7;
-
-&#x20; }
-
-&#x20; .tree-body .file {
-
-&#x20;   color: #e0e0e0;
-
-&#x20; }
-
-&#x20; .tree-body .tree-line {
-
-&#x20;   white-space: pre;
-
-&#x20;   font-family: inherit;
-
-&#x20; }
-
-</style>
-
-
-
-<div class="tree-terminal">
-
-&#x20; <div class="tree-titlebar">
-
-&#x20;   <div class="tree-dot tree-dot-red"></div>
-
-&#x20;   <div class="tree-dot tree-dot-yellow"></div>
-
-&#x20;   <div class="tree-dot tree-dot-green"></div>
-
-&#x20;   <span class="tree-tab">Project Structure</span>
-
-&#x20; </div>
-
-&#x20; <div class="tree-body">
-
-&#x20;   <div class="tree-line"><span class="dir">netspector/</span></div>
-
-&#x20;   <div class="tree-line">├── <span class="dir">scanner/</span></div>
-
-&#x20;   <div class="tree-line">│   ├── <span class="dir">core/</span></div>
-
-&#x20;   <div class="tree-line">│   │   └── <span class="file">port\_scanner.py</span></div>
-
-&#x20;   <div class="tree-line">│   └── <span class="dir">utils/</span></div>
-
-&#x20;   <div class="tree-line">│       ├── <span class="file">ip\_utils.py</span></div>
-
-&#x20;   <div class="tree-line">│       └── <span class="file">port\_utils.py</span></div>
-
-&#x20;   <div class="tree-line">├── <span class="file">main.py</span></div>
-
-&#x20;   <div class="tree-line">├── <span class="file">README.md</span></div>
-
-&#x20;   <div class="tree-line">└── <span class="file">cli.py</span></div>
-
-&#x20; </div>
-
-</div>
-
-\---
-
-
-
-\## Installation
-
-
+<h1 align="center" style="font-size: 10em; margin: 2em 0;">
+  Netspector
+</h1>
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.6+-blue?style=flat&logo=python">
+  <img src="https://img.shields.io/github/stars/Red-Warrior-hkg/Netspector?style=flat&logo=github">
+  <img src="https://img.shields.io/github/license/Red-Warrior-hkg/Netspector?style=flat">
+  <img src="https://img.shields.io/badge/Python-3.6+-blue?style=flat&logo=python">
+  <img src="https://img.shields.io/badge/networking-✓-brightgreen?style=flat">
+  <img src="https://img.shields.io/badge/network--scanner-✓-success?style=flat">
+  <img src="https://img.shields.io/badge/cybersecurity-✓-red?style=flat">
+  <img src="https://img.shields.io/badge/port--scanner-✓-orange?style=flat">
+  <img src="https://img.shields.io/badge/CLI-✓-blueviolet?style=flat">
+  <img src="https://img.shields.io/badge/network--tools-✓-lightgrey?style=flat">
+  <img src="https://img.shields.io/badge/subnet--scan-✓-yellow?style=flat">
+  <img src="https://img.shields.io/badge/UDP--scan-✓-blue?style=flat">
+  <img src="https://img.shields.io/badge/TCP--scan-✓-blue?style=flat">
+  <img src="https://img.shields.io/badge/host--discovery-✓-informational?style=flat">
+  <img src="https://img.shields.io/badge/ethical--hacking-✓-critical?style=flat">
+  <img src="https://img.shields.io/badge/learning--python-✓-brightgreen?style=flat">
+  <img src="https://img.shields.io/badge/penetration--testing-✓-orange?style=flat">
+  <img src="https://img.shields.io/badge/network--automation-✓-blue?style=flat">
+  <img src="https://img.shields.io/badge/netspector-v1.0-cyan?style=flat">
+</p>
+
+<p align="center">
+  A lightweight network inspection tool built from scratch for learning and experimentation.
+</p>
+
+---
+
+## 📖 Overview
+
+**Netspector** is a simple command-line tool for basic network reconnaissance.  
+It focuses on core networking concepts while staying fast, minimal, and dependency-free.
+
+**Use it for:**
+- Learning networking fundamentals  
+- Understanding how scanners work  
+- Practicing Python  
+- Building your cybersecurity portfolio  
+
+---
+
+## 🚀 Features
+
+- TCP port scanning (single / range)  
+- Basic UDP scanning  
+- Host reachability (ping)  
+- RTT (latency) measurement  
+- Subnet enumeration (CIDR)  
+- Private IP detection  
+- Local listening ports discovery  
+- Domain resolution  
+- Interactive CLI  
+- Colored output  
+- No external dependencies  
+
+---
+
+## 🗂️ Project Structure
+
+<img width="600" height="286" alt="image" src="https://github.com/user-attachments/assets/035b9b65-cd81-48fb-ad7c-c84bf11eda48" />
+
+## ⚙️ Installation
 
 ```bash
-
 git clone https://github.com/Red-Warrior-hkg/Netspector.git
-
 cd Netspector
+````
 
-```
+### Requirements
 
+* Python 3.6+
+* No additional packages required
 
+---
 
-\### Requirements
+## 🧑‍💻 Usage
 
-
-
-\* Python 3.6+
-
-\* No additional packages required
-
-
-
-\---
-
-
-
-\## Usage
-
-
-
-\### Interactive Mode (Recommended)
-
-
+### Interactive Mode
 
 ```bash
-
 python main.py
-
 ```
 
+Commands:
 
+* `help` → show commands
+* `exit` → quit
 
-You will enter the Netspector shell:
+---
 
-
-
-```
-
-netspector>
-
-```
-
-
-
-Available commands:
-
-
-
-\* `help` → show available commands
-
-\* `exit` → quit the program
-
-
-
-\---
-
-
-
-\### One-shot Mode
-
-
+### One-shot Mode
 
 ```bash
-
-python main.py <command> \[options]
-
+python main.py <command> [options]
 ```
 
+---
 
+## 📚 Cheat Sheet
+<img width="633" height="638" alt="image" src="https://github.com/user-attachments/assets/158b0985-146d-4af4-bd11-1def77bff583" />
+---
 
-\## Cheat Sheet
+## ⚙️ How It Works
 
-<style>
+* **TCP Scan** → Full 3-way handshake
+* **UDP Scan** → Packet-based detection
+* **Ping** → Uses system commands
+* **RTT** → Measures connection time
+* **Subnet** → Expands CIDR ranges
+* **Listening Ports** → Uses system tools
 
-&#x20; \* { box-sizing: border-box; margin: 0; padding: 0; }
+---
 
-&#x20; .terminal { background: #1a1a1a; border-radius: 10px; overflow: hidden; font-family: var(--font-mono); font-size: 13.5px; }
+## ⚠️ Limitations
 
-&#x20; .titlebar { background: #2a2a2a; padding: 10px 14px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #333; }
+* Uses full TCP connect (no SYN scan)
+* UDP scanning may be unreliable
+* No OS fingerprinting
+* Not intended to replace advanced tools
 
-&#x20; .dot { width: 12px; height: 12px; border-radius: 50%; }
+---
 
-&#x20; .d-red { background: #ff5f57; } .d-yellow { background: #febc2e; } .d-green { background: #28c840; }
+## 🔮 Future Improvements
 
-&#x20; .tab { margin-left: 12px; font-size: 12px; color: #888; background: #1a1a1a; padding: 3px 12px; border-radius: 4px; }
+* Web interface + HTML cheat sheet
+* Command explanations & quick reference
+* Visual scan output
+* Export results (JSON / TXT)
 
-&#x20; .body { padding: 18px 20px; line-height: 2; }
+---
 
-&#x20; .comment { color: #6a6a6a; }
+## ⭐ Support
 
-&#x20; .cmd { color: #e0e0e0; }
+If you like this project, consider starring it on GitHub.
 
-&#x20; .kw { color: #e0e0e0; }
-
-&#x20; .ip { color: #e8834a; }
-
-&#x20; .flag { color: #e8834a; }
-
-&#x20; .sep { display: block; height: 10px; }
-
-</style>
-
-
-
-<div class="terminal">
-
-&#x20; <div class="titlebar">
-
-&#x20;   <div class="dot d-red"></div>
-
-&#x20;   <div class="dot d-yellow"></div>
-
-&#x20;   <div class="dot d-green"></div>
-
-&#x20;   <span class="tab">Bash</span>
-
-&#x20; </div>
-
-&#x20; <div class="body">
-
-
-
-&#x20;   <span class="comment"># scan default ports (1–1000)</span><br>
-
-&#x20;   <span class="kw">python main.py scan</span> <span class="ip">127.0.0.1</span><br>
-
-&#x20;   <span class="sep"></span>
-
-
-
-&#x20;   <span class="comment"># scan custom port range</span><br>
-
-&#x20;   <span class="kw">python main.py scan</span> <span class="ip">192.168.1.1</span> <span class="flag">--start 20 --end 100</span><br>
-
-&#x20;   <span class="sep"></span>
-
-
-
-&#x20;   <span class="comment"># single TCP port</span><br>
-
-&#x20;   <span class="kw">python main.py scan-port</span> <span class="ip">8.8.8.8</span> <span class="flag">53</span><br>
-
-&#x20;   <span class="sep"></span>
-
-
-
-&#x20;   <span class="comment"># UDP scan</span><br>
-
-&#x20;   <span class="kw">python main.py udp</span> <span class="ip">192.168.1.1</span> <span class="flag">--max-port 200</span><br>
-
-&#x20;   <span class="sep"></span>
-
-
-
-&#x20;   <span class="comment"># ping (ICMP reachability)</span><br>
-
-&#x20;   <span class="kw">python main.py ping</span> <span class="ip">8.8.8.8</span><br>
-
-&#x20;   <span class="sep"></span>
-
-
-
-&#x20;   <span class="comment"># round-trip time to a port</span><br>
-
-&#x20;   <span class="kw">python main.py rtt</span> <span class="ip">google.com</span> <span class="flag">443</span><br>
-
-&#x20;   <span class="sep"></span>
-
-
-
-&#x20;   <span class="comment"># list all IPs in a subnet</span><br>
-
-&#x20;   <span class="kw">python main.py subnet</span> <span class="ip">192.168.1.0/24</span><br>
-
-&#x20;   <span class="sep"></span>
-
-
-
-&#x20;   <span class="comment"># check if IP is private (RFC 1918)</span><br>
-
-&#x20;   <span class="kw">python main.py private</span> <span class="ip">10.0.0.1</span><br>
-
-&#x20;   <span class="sep"></span>
-
-
-
-&#x20;   <span class="comment"># local listening ports</span><br>
-
-&#x20;   <span class="kw">python main.py listening</span><br>
-
-
-
-&#x20; </div>
-
-</div>
-
-
-
-\### Examples
-
-
-
-```bash
-
-python main.py scan 192.168.1.1 --start 1 --end 100
-
-python main.py scan-port 192.168.1.1 80
-
-python main.py udp 192.168.1.1 --max-port 100
-
-python main.py ping 192.168.1.1
-
-python main.py rtt google.com 80
-
-python main.py subnet 192.168.1.0/24
-
-python main.py private 192.168.1.1
-
-python main.py listening
-
-```
-
-
-
-\---
-
-
-
-Planned features:
-
-
-
-\* Simple web interface for commands
-
-\* Command examples with explanations
-
-\* Quick reference for networking concepts
-
-\* Visual representation of scans
-
-
-
-\## How It Works
-
-
-
-\* \*\*TCP Scan\*\*: Uses full TCP connections (3-way handshake)
-
-\* \*\*UDP Scan\*\*: Sends packets and waits for responses
-
-\* \*\*Ping\*\*: Uses system commands depending on the OS
-
-\* \*\*RTT\*\*: Measures connection time to a TCP port
-
-\* \*\*Subnet\*\*: Expands CIDR into usable IP addresses
-
-\* \*\*Listening Ports\*\*: Uses system tools like `netstat`, `ss`, or `lsof`
-
-
-
-\---
-
-
-
-\## Limitations
-
-
-
-\* Uses full TCP connect (no SYN scan)
-
-\* UDP scanning is unreliable by design
-
-\* No OS fingerprinting
-
-\* Not intended to replace Nmap
-
-
-
-\---
-
-
-
-
-
-=======
-# Netspector
-Netspector is a lightweight network scanner built from scratch to explore port scanning, host discovery, and subnet analysis. It’s designed for learning networking concepts and practicing Python in real-world scenarios.
->>>>>>> bcaea79b045672823b0fec244ccded8b1b0aa525
+<p align="center">
+  <a href="https://github.com/Red-Warrior-hkg/Netspector">
+    <img src="https://img.shields.io/badge/View%20on-GitHub-black?style=for-the-badge&logo=github">
+  </a>
+</p>
