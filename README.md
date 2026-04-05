@@ -21,7 +21,7 @@
   <img src="https://img.shields.io/badge/learning--python-✓-brightgreen?style=flat">
   <img src="https://img.shields.io/badge/penetration--testing-✓-orange?style=flat">
   <img src="https://img.shields.io/badge/network--automation-✓-blue?style=flat">
-  <img src="https://img.shields.io/badge/netspector-v1.0-cyan?style=flat">
+  <img src="https://img.shields.io/badge/netspector-v1.3-cyan?style=flat">
 </p>
 
 <p align="center">
