@@ -101,8 +101,8 @@ python main.py <command> [options]
 ---
 
 ## 📚 Cheat Sheet
-<img width="633" height="638" alt="image" src="https://github.com/user-attachments/assets/158b0985-146d-4af4-bd11-1def77bff583" />
----
+<img width="580" height="572" alt="image" src="https://github.com/user-attachments/assets/9fcbd980-15f6-4a10-8ad5-d53da470654a" />
+
 
 ## ⚙️ How It Works
 
