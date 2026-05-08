@@ -3,7 +3,6 @@
   Netspector
 </h1>
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.6+-blue?style=flat&logo=python">
   <img src="https://img.shields.io/github/stars/Red-Warrior-hkg/Netspector?style=flat&logo=github">
   <img src="https://img.shields.io/github/license/Red-Warrior-hkg/Netspector?style=flat">
   <img src="https://img.shields.io/badge/Python-3.6+-blue?style=flat&logo=python">
@@ -135,7 +134,7 @@ python main.py <command> [options]
 
 ## ⭐ Support
 
-If you like this project, consider starring it on GitHub.
+If you like this project, consider starring it.
 
 <p align="center">
   <a href="https://github.com/Red-Warrior-hkg/Netspector">
